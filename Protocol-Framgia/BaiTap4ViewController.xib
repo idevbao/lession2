@@ -28,20 +28,20 @@
                     <rect key="frame" x="23.5" y="64" width="328" height="216"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m9E-aq-HPI">
-                            <rect key="frame" x="27.5" y="9" width="273" height="54"/>
+                            <rect key="frame" x="27.5" y="9.5" width="273" height="54"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gI8-AK-4ec">
-                            <rect key="frame" x="27.5" y="81" width="273" height="54"/>
+                            <rect key="frame" x="27.5" y="81.5" width="273" height="54"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-uS-ZCi">
-                            <rect key="frame" x="36.5" y="146" width="91" height="54"/>
+                            <rect key="frame" x="36.5" y="146.5" width="91" height="54"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Button">
@@ -49,7 +49,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvR-Us-Ov6">
-                            <rect key="frame" x="200.5" y="146" width="91" height="54"/>
+                            <rect key="frame" x="200.5" y="146.5" width="91" height="54"/>
                             <color key="backgroundColor" white="0.11548549107142857" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Button">

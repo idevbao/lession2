@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame:UIScreen.main.bounds)
 // su dung storyboard
 //        let controller = storyboard.instantiateViewController(withIdentifier: "mainHome")
-        let VCdotXib = Bai1CodeViewController(nibName: "Bai1CodeViewController", bundle: nil)
+//        let VCdotXib = Baitap4CodeViewController(nibName: "Baitap4CodeViewController", bundle: nil)
+        let VCdotXib = BaiTap2CodeViewController()
         window?.rootViewController = VCdotXib
         window?.makeKeyAndVisible()
         // Override point for customization after application launch.

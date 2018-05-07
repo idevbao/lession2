@@ -56,7 +56,7 @@
                 <constraint firstItem="M5r-1c-FpG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y4d-lE-i86"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-306" y="46"/>
+            <point key="canvasLocation" x="7" y="6"/>
         </view>
     </objects>
 </document>
