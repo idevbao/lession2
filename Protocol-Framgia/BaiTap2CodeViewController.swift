@@ -1,5 +1,11 @@
+//
+//
+//        lblResult?.translatesAutoresizingMaskIntoConstraints = false
+//        lblResult?.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
+//        lblResult?.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
+//        lblResult?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+//        lblResult?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
 
-        
 //
 //  BaiTap2CodeViewController.swift
 //  Protocol-Framgia
@@ -71,23 +77,15 @@ class BaiTap2CodeViewController: UIViewController {
     
     func initUI() {
         viewContent = UIView()
+        self.view.addSubview(viewContent)
         viewContent.translatesAutoresizingMaskIntoConstraints = false
-        viewContent.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        viewContent.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        viewContent.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        viewContent.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        
-        
-        
-        lblResult?.translatesAutoresizingMaskIntoConstraints = false
-        lblResult?.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        lblResult?.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
-        lblResult?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        lblResult?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        
+        viewContent.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        viewContent.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        viewContent.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        viewContent.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
         viewContent.backgroundColor = UIColor(red: 150.0/255, green: 150.0/255, blue: 150.0/255, alpha: 1.0)
-        self.view.addSubview(viewContent)
+        
         
         stackViewContent = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
         stackViewContent.axis = .vertical
@@ -104,14 +102,27 @@ class BaiTap2CodeViewController: UIViewController {
         self.viewContent.addSubview(stackViewContent)
         
         // result
-        lblResult = UILabel.init(frame: CGRect(x: 16, y: 0, width: SCREEN_WIDTH - 32, height: SCREEN_HEIGHT/6))
+        lblResult = UILabel()
+        self.view.addSubview(lblResult)
+        lblResult.translatesAutoresizingMaskIntoConstraints = false
+        lblResult.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        lblResult.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        lblResult.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        lblResult.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
         lblResult.text = "0"
         lblResult.textAlignment = .right
         lblResult.font = UIFont(name: "Helvetica", size: 34)
         self.viewOne.addSubview(lblResult)
         
         // AC, +/-, %
-        stackViewTwo = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT/6))
+        stackViewTwo = UIStackView()
+        self.view.addSubview(stackViewTwo)
+        stackViewTwo.translatesAutoresizingMaskIntoConstraints = false
+        stackViewTwo.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor).isActive = true
+        stackViewTwo.widthAnchor.constraint(equalTo: viewContent.widthAnchor).isActive = true
+        stackViewTwo.topAnchor.constraint(equalTo: lblResult.bottomAnchor).isActive = true
+        stackViewTwo.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
+        
         stackViewTwo.axis = .horizontal
         stackViewTwo.alignment = .fill
         stackViewTwo.distribution = .fillEqually
@@ -137,7 +148,14 @@ class BaiTap2CodeViewController: UIViewController {
         self.viewTwo.addSubview(stackViewTwo)
         
         // 7, 8, 9, x
-        stackViewThree = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT/6))
+        stackViewThree = UIStackView()
+
+        self.view.addSubview(stackViewThree)
+        stackViewThree.translatesAutoresizingMaskIntoConstraints = false
+        stackViewThree.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor).isActive = true
+        stackViewThree.widthAnchor.constraint(equalTo: viewContent.widthAnchor).isActive = true
+        stackViewThree.topAnchor.constraint(equalTo: stackViewTwo.bottomAnchor).isActive = true
+        stackViewThree.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
         stackViewThree.axis = .horizontal
         stackViewThree.alignment = .fill
         stackViewThree.distribution = .fillEqually
@@ -165,7 +183,13 @@ class BaiTap2CodeViewController: UIViewController {
         self.viewThree.addSubview(stackViewThree)
         
         // 4, 5, 6, -
-        stackViewFour = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT/6))
+        stackViewFour = UIStackView()
+        self.view.addSubview(stackViewFour)
+        stackViewFour.translatesAutoresizingMaskIntoConstraints = false
+        stackViewFour.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor).isActive = true
+        stackViewFour.widthAnchor.constraint(equalTo: viewContent.widthAnchor).isActive = true
+        stackViewFour.topAnchor.constraint(equalTo: stackViewThree.bottomAnchor).isActive = true
+        stackViewFour.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
         stackViewFour.axis = .horizontal
         stackViewFour.alignment = .fill
         stackViewFour.distribution = .fillEqually
@@ -193,7 +217,13 @@ class BaiTap2CodeViewController: UIViewController {
         self.viewFour.addSubview(stackViewFour)
         
         // 1, 2, 3, +
-        stackViewFine = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT/6))
+        stackViewFine = UIStackView()
+        self.view.addSubview(stackViewFine)
+        stackViewFine.translatesAutoresizingMaskIntoConstraints = false
+        stackViewFine.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor).isActive = true
+        stackViewFine.widthAnchor.constraint(equalTo: viewContent.widthAnchor).isActive = true
+        stackViewFine.topAnchor.constraint(equalTo: stackViewFour.bottomAnchor).isActive = true
+        stackViewFine.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
         stackViewFine.axis = .horizontal
         stackViewFine.alignment = .fill
         stackViewFine.distribution = .fillEqually
@@ -221,7 +251,13 @@ class BaiTap2CodeViewController: UIViewController {
         self.viewFine.addSubview(stackViewFine)
         
         // 0, ., =
-        stackViewSix = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT/6))
+        stackViewSix = UIStackView()
+        self.view.addSubview(stackViewSix)
+        stackViewSix.translatesAutoresizingMaskIntoConstraints = false
+        stackViewSix.centerXAnchor.constraint(equalTo: viewContent.centerXAnchor).isActive = true
+        stackViewSix.widthAnchor.constraint(equalTo: viewContent.widthAnchor).isActive = true
+        stackViewSix.topAnchor.constraint(equalTo: stackViewFine.bottomAnchor).isActive = true
+        stackViewSix.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/6).isActive = true
         stackViewSix.axis = .horizontal
         stackViewSix.alignment = .fill
         stackViewSix.distribution = .fillEqually
@@ -234,7 +270,13 @@ class BaiTap2CodeViewController: UIViewController {
         stackViewSix.addArrangedSubview(viewSeven)
         self.viewSix.addSubview(stackViewSix)
         
-        stackViewSeven = UIStackView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH/2, height: SCREEN_HEIGHT/6))
+        stackViewSeven = UIStackView()
+        self.view.addSubview(stackViewSeven)
+        stackViewSeven.translatesAutoresizingMaskIntoConstraints = false
+        stackViewSeven.trailingAnchor.constraint(equalTo:self.view.trailingAnchor).isActive = true
+        stackViewSeven.widthAnchor.constraint(equalTo: stackViewSix.widthAnchor).isActive = true
+        stackViewSeven.topAnchor.constraint(equalTo: stackViewSix.topAnchor).isActive = true
+        stackViewSeven.heightAnchor.constraint(equalTo: stackViewSix.heightAnchor).isActive = true
         stackViewSeven.axis = .horizontal
         stackViewSeven.alignment = .fill
         stackViewSeven.distribution = .fillEqually
