@@ -140,7 +140,7 @@ class BaiTap2CodeViewController: UIViewController {
         btnBalance.setTitleColor(UIColor.black, for: .normal)
         btnBalance.titleLabel?.font = UIFont(name: "Helvetica", size: 20)
         btnDivide.backgroundColor = UIColor(red: 245.0/255, green: 145.0/255, blue: 64.0/255, alpha: 1.0)
-        btnDivide.setImage(UIImage.init(named: "icons8-divide-24"), for: .normal)
+        btnDivide.setTitle("/", for: .normal)
         stackViewTwo.addArrangedSubview(btnAC)
         stackViewTwo.addArrangedSubview(btnAddOrSub)
         stackViewTwo.addArrangedSubview(btnBalance)
@@ -274,7 +274,7 @@ class BaiTap2CodeViewController: UIViewController {
         self.view.addSubview(stackViewSeven)
         stackViewSeven.translatesAutoresizingMaskIntoConstraints = false
         stackViewSeven.trailingAnchor.constraint(equalTo:self.view.trailingAnchor).isActive = true
-        stackViewSeven.widthAnchor.constraint(equalTo: stackViewSix.widthAnchor).isActive = true
+        stackViewSeven.widthAnchor.constraint(equalTo: stackViewSix.widthAnchor, multiplier: 1/2).isActive = true
         stackViewSeven.topAnchor.constraint(equalTo: stackViewSix.topAnchor).isActive = true
         stackViewSeven.heightAnchor.constraint(equalTo: stackViewSix.heightAnchor).isActive = true
         stackViewSeven.axis = .horizontal
@@ -283,12 +283,12 @@ class BaiTap2CodeViewController: UIViewController {
         stackViewSeven.spacing = 1
         btnDot.backgroundColor = UIColor(red: 222.0/255, green: 222.0/255, blue: 222.0/255, alpha: 1.0)
         btnDot.setTitle(".", for: .normal)
-        btnDot.setTitleColor(UIColor.black, for: .normal)
+        btnDot.setTitleColor(.black, for: .normal)
         btnDot.titleLabel?.font = UIFont(name: "Helvetica", size: 25)
         btnResult.backgroundColor = UIColor(red: 245.0/255, green: 145.0/255, blue: 64.0/255, alpha: 1.0)
         btnResult.setTitle("=", for: .normal)
-        btnResult.setTitleColor(UIColor.white, for: .normal)
-        btnResult.titleLabel?.font = UIFont(name: "Helvetica", size: 2)
+        btnResult.setTitleColor(.white, for: .normal)
+        btnResult.titleLabel?.font = UIFont(name: "Helvetica", size: 20)
         stackViewSeven.addArrangedSubview(btnDot)
         stackViewSeven.addArrangedSubview(btnResult)
         self.viewSeven.addSubview(stackViewSeven)
